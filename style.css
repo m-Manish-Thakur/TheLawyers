@@ -124,8 +124,9 @@ body {
   font-family: "timesNew";
   font-weight: 500;
 }
-#page1 p {
+#page1 h3 {
   font-size: 23px;
+  font-weight: 500;
   letter-spacing: 0.3px;
   margin-top: 25px;
   color: rgb(170, 170, 177);
@@ -256,16 +257,18 @@ body {
 #page2 .part1 h1 {
   font-size: 45px;
   font-weight: 500;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   color: var(--main);
 }
 #page2 .part1 h1 span {
   font-family: "timesNew";
 }
-#page2 .part1 p {
+#page2 .part1 h4 {
   color: rgb(127, 135, 142);
   margin-top: 25px;
   font-size: 18px;
   line-height: 29px;
+  font-weight: 500;
   letter-spacing: 0.5px;
 }
 
@@ -275,7 +278,219 @@ body {
 /* ###################################   Page 3   ###################################### */
 
 #page3 {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: var(--main);
+  position: relative;
+  padding: 5vw 10vw;
+  border-radius: 30px 30px 0 0;
+  transform: translateY(-20px);
+}
+#page3 h1 {
+  font-family: "regular";
+  font-size: 2.7vw;
+  color: aliceblue;
+  letter-spacing: 1px;
+  line-height: 3.5vw;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+#page3 span {
+  font-size: 20px;
+  padding: 14px;
+  font-weight: 500;
+  color: rgb(127, 135, 142);
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+
+#page3 .container {
+  display: flex;
+  align-items: flex-start;
+  gap: 15%;
+}
+#page3 .container .item {
+  width: 40%;
+  padding-top: 70px;
+}
+#page3 h4 {
+  font-size: 30px;
+  font-family: "medium";
+  font-weight: 500;
+  color: gainsboro;
+  letter-spacing: 0.5px;
+  padding-bottom: 30px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--light);
+}
+#page3 .expertise {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  cursor: pointer;
+}
+#page3 .expertise p {
+  font-family: "medium";
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(129, 129, 129);
+  letter-spacing: 0.2px;
+}
+#page3 .expertise i {
+  font-family: "medium";
+  font-weight: 500;
+  font-size: 20px;
+  padding: 8px;
+  border: 1px solid var(--light);
+  border-radius: 50%;
+  color: rgb(141, 141, 148);
+  transition: 0.1s linear;
+}
+#page3 .container .expertise:hover i {
+  background-color: rgb(210, 60, 72);
+  color: gainsboro;
+  border: 1px solid rgb(210, 60, 72);
+  transform: rotate(-45deg);
+}
+
+/* ##########################   ABOUT  US  ################################ */
+
+#about {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 100px;
+}
+#about img {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  scale: 1.2;
+}
+#about .about {
+  width: 550px;
+  z-index: 5;
+  height: 500px;
+  border-radius: 30px;
+  background: rgba(67, 77, 72, 0.9);
+  color: var(--main);
+  text-align: center;
+  padding: 70px 50px;
+  color: gainsboro;
+  font-family: "medium";
+}
+
+#about .about i {
+  font-size: 20px;
+}
+#about .about h1 {
+  font-size: 35px;
+  letter-spacing: 0.7px;
+  margin-top: 25px;
+}
+#about .about p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-top: 25px;
+}
+
+/* ##########################   Page 4   ############################ */
+
+#page4 {
+  height: 100vh;
+  width: 100%;
+  background-color: gainsboro;
+  padding: 5vw;
+  padding-left: 10vw;
+  transform: translateY(-20px);
+  border-radius: 30px 30px;
+}
+#page4 .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "medium";
+}
+#page4 .title h1 {
+  color: var(--main);
+  font-weight: 500;
+  font-size: 2.8vw;
+  letter-spacing: 0.5px;
+}
+#page4 .title p {
+  font-size: 17px;
+  color: var(--light);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#page4 .title p i {
+  padding: 6px;
+  background-color: aliceblue;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+.swiper-slide {
+  width: 360px !important;
+  margin-left: 20px;
+}
+.swiper-slide img {
+  width: 100%;
+  border-radius: 20px;
+}
+.swiper-slide p {
+  margin-top: 15px;
+  font-size: 15px;
+  color: var(--light);
+  font-family: "medium";
+  font-weight: 500;
+}
+.swiper-slide h3 {
+  margin-top: 15px;
+  font-size: 25px;
+  color: var(--main);
+  font-family: "medium";
+  font-weight: 500;
+}
+.swiper-slide .button {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.swiper-slide .button button {
+  padding: 8px 16px;
+  font-family: "medium";
+  font-weight: 500;
+  font-size: 15px;
+  color: gainsboro;
+  background-color: var(--light);
+  border-radius: 20px;
+  border: none;
+  letter-spacing: 0.3px;
+}
+.swiper-slide .button button:nth-child(2) {
+  background-color: rgb(204, 204, 204);
+  color: var(--light);
+  margin-left: 10px;
+}
+
+/* #################################   Footer   ######################## */
+#footer {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--light);
 }

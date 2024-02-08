@@ -33,6 +33,17 @@ const init = () => {
 };
 init();
 
+// const lenis = new Lenis();
+// lenis.on("scroll", (e) => {
+//   console.log(e);
+// });
+// lenis.on("scroll", ScrollTrigger.update);
+// gsap.ticker.add((time) => {
+//   lenis.raf(time * 1000);
+// });
+
+// gsap.ticker.lagSmoothing(0);
+
 const headerTl = gsap.timeline();
 
 gsap.from("#header img, #header nav, #header #search", {
@@ -56,13 +67,26 @@ gsap.to("#header", {
   },
 });
 
-gsap.from("#page1 h1", {
-  y: "110%",
+gsap.from("#page1 p", {
+  y: "100%",
   opacity: 0,
   duration: 1,
   delay: 1,
   stagger: 0.1,
   ease: "expo.out",
+});
+
+gsap.from("#page1 #part2 .item", {
+  scale: 0.5,
+  opacity: "0",
+  duration: 1,
+  scrollTrigger: {
+    trigger: "#page1 #part2",
+    scroller: "#main",
+    start: "top 70%",
+    end: "top 70%",
+    scrub: 3,
+  },
 });
 
 document.querySelector("#button button").addEventListener("mouseover", () => {
@@ -87,4 +111,43 @@ document.querySelector("#button button").addEventListener("mouseout", () => {
     height: "0",
     width: "0",
   });
+});
+
+// #############################   Page 2  ###########################
+
+gsap.from("#page2 .part1 img", {
+  scale: 0.3,
+  opacity: "0",
+  duration: 1,
+  scrollTrigger: {
+    trigger: "#page2 .part1",
+    scroller: "#main",
+    start: "top 60%",
+    end: "top 60%",
+    scrub: 3,
+  },
+});
+
+// #############################   Page 3  ###########################
+
+gsap.from("#page3 p", {
+  y: "100%",
+  duration: 1,
+  ease: "expo.out",
+  scrollTrigger: {
+    trigger: "#page3 p",
+    scroller: "#main",
+    start: "top 70%",
+    end: "top 70%",
+    scrub: 3,
+  },
+});
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
