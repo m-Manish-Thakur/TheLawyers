@@ -90,6 +90,31 @@ body {
   font-size: 17px;
   border-radius: 50%;
 }
+#header #menu {
+  display: none;
+  color: gainsboro;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  font-size: 18px;
+}
+@media screen and (max-width: 800px) {
+  #top p:nth-child(3) {
+    display: none;
+  }
+  #header {
+    padding: 20px 2vw;
+  }
+  #header img {
+    height: 50px;
+  }
+  #header nav {
+    display: none;
+  }
+  #header #menu {
+    display: block;
+  }
+}
 
 /* ####################################   Page 1   ################################## */
 #page1 {
@@ -236,6 +261,75 @@ body {
   line-height: 27px;
   color: rgb(170, 170, 177);
 }
+
+@media screen and (max-width: 500px) {
+  #page1 {
+    padding: 3vw;
+    padding-bottom: 50px;
+  }
+  #page1 .left {
+    width: 100%;
+    padding-top: 80px;
+    padding-left: 1vw;
+  }
+  #page1 h1 {
+    font-size: 50px;
+    line-height: 65px;
+  }
+  #page1 h3 {
+    font-size: 20px;
+  }
+  #page1 .lineDiv {
+    display: none;
+  }
+  #page1 .imgContainer {
+    height: auto;
+    border-radius: 10px;
+    margin-top: 100px;
+  }
+  #page1 .imgContainer img {
+    scale: 1;
+  }
+
+  #page1 #part2 {
+    width: 100%;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 100px;
+  }
+  #page1 #part2 .item {
+    width: 100%;
+    font-family: "medium";
+  }
+  #page1 #part2 img {
+    height: 35px;
+  }
+  #page1 #part2 h3 {
+    letter-spacing: 0.1px;
+    font-size: 27px;
+    margin-top: 20px;
+  }
+  #page1 #part2 p {
+    font-size: 17px;
+    line-height: 28px;
+    margin-top: 10px;
+  }
+  #button {
+    width: 300px;
+  }
+  #button button {
+    padding: 15px 30px;
+    font-size: 17px;
+  }
+  #button #arrow2 {
+    padding: 15px;
+    font-size: 21px;
+  }
+  #button #arrow1 {
+    display: none;
+  }
+}
+
 /* ##################################  Page 2   ########################################## */
 #page2 {
   /* min-height: 150vh; */
@@ -272,7 +366,32 @@ body {
   letter-spacing: 0.5px;
 }
 
-#page2 .part1 img {
+@media screen and (max-width: 550px) {
+  #page2 {
+    padding-bottom: 120px;
+  }
+  #page2 .part1 {
+    flex-direction: column-reverse;
+    gap: 70px;
+  }
+  #page2 .part1 img {
+    width: 100%;
+  }
+  #page2 .part1 .text {
+    width: 100%;
+    font-family: "regular";
+  }
+  #page2 .part1 h1 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  #page2 .part1 h1 span {
+    font-family: "timesNew";
+  }
+  #page2 .part1 h4 {
+    font-size: 17px;
+    letter-spacing: 0.3px;
+  }
 }
 
 /* ###################################   Page 3   ###################################### */
@@ -354,6 +473,46 @@ body {
   transform: rotate(-45deg);
 }
 
+@media screen and (max-width: 550px) {
+  #page3 {
+    padding: 50px 15px;
+    transform: translateY(-25px);
+  }
+  #page3 h1 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    line-height: 35px;
+  }
+  #page3 span {
+    font-size: 15px;
+    padding: 8px;
+  }
+  #page3 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15%;
+  }
+  #page3 .container .item {
+    width: 100%;
+    padding-top: 50px;
+  }
+  #page3 h4 {
+    font-size: 22px;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+  }
+  #page3 .expertise {
+    margin-top: 10px;
+  }
+  #page3 .expertise p {
+    font-size: 18px;
+  }
+  #page3 .expertise i {
+    font-size: 16px;
+  }
+}
+
 /* ##########################   ABOUT  US  ################################ */
 
 #about {
@@ -400,6 +559,45 @@ body {
   font-weight: 500;
   letter-spacing: 0.5px;
   margin-top: 25px;
+}
+
+@media screen and (max-width: 550px) {
+  #about {
+    width: 100%;
+    height: 500px;
+    padding: 50px 0;
+    position: relative;
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0;
+  }
+  #about img {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    scale: 1;
+  }
+  #about .about {
+    width: 90%;
+    z-index: 5;
+    height: 100%;
+    border-radius: 25px;
+    padding: 50px 10px;
+  }
+  #about .about i {
+    font-size: 25px;
+  }
+  #about .about h1 {
+    font-size: 30px;
+  }
+  #about .about p {
+    font-size: 17px;
+    line-height: 28px;
+  }
 }
 
 /* ##########################   Page 4   ############################ */
@@ -486,6 +684,36 @@ body {
   background-color: rgb(204, 204, 204);
   color: var(--light);
   margin-left: 10px;
+}
+
+@media screen and (max-width: 550px) {
+  #page4 {
+    height: 100%;
+    width: 100%;
+    background-color: gainsboro;
+    padding: 50px 15px;
+    padding-left: 15px;
+    transform: translateY(-20px);
+    border-radius: 30px 30px;
+  }
+  #page4 .title h1 {
+    font-size: 27px;
+  }
+  #page4 .title p {
+    display: none;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+  }
+  .swiper-slide {
+    width: 320px !important;
+    margin-left: 0px;
+  }
+  .swiper-slide h3 {
+    font-size: 22px;
+  }
 }
 
 /* #################################   Footer   ######################## */

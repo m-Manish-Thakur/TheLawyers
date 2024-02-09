@@ -63,7 +63,7 @@ gsap.to("#header", {
     scroller: "#main",
     start: "top -20%",
     end: "top -25%",
-    scrub: 2,
+    scrub: 3,
   },
 });
 
